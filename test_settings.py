@@ -1,3 +1,6 @@
+
+from django_module_common.simple_mongo_model import settings as settings_mongo
+
 SECRET_KEY = 'test'
 SITE_ID = 1
 
@@ -87,3 +90,18 @@ REST_FRAMEWORK = {
         'rest_framework.filters.OrderingFilter'
     )
 }
+
+settings_mongo.load_settings({
+    'databases': {
+        'default': {
+            'MONGO_HOST': 'localhost',
+            'MONGO_PORT': 9999,
+            'MONGO_DB': 'name_db',
+            'TZ_AWARE': True,
+            'USERNAME': 'eduardo_n',
+            'PASSWORD': 'eduardo_n',
+            'AUTH_MECHANISM': 'SCRAM-SHA-256',
+        }
+    }
+})
+MONGO_CONFIG = settings_mongo
