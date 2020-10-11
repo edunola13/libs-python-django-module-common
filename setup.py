@@ -8,7 +8,7 @@ README = open(os.path.join(path, 'README.md')).read()
 
 setup(
     name='django_module_common',
-    version='0.1',
+    version='0.3',
     packages=find_packages(),
     description='Django Module Common',
     long_description=README,
@@ -24,5 +24,7 @@ setup(
         'Django >= 3.0',
         'django-filter >= 2.2.0',
         'djangorestframework >= 3.10.3',
+        'pymongo >= 3.10.1,<4.0.0'
+        'factory_boy'
     ],
 )
